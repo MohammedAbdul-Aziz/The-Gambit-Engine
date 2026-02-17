@@ -13,6 +13,9 @@
 
 ## Core Mechanics
 
+- [Gas-Based Evolution](mechanics/gas-evolution.md)
+- [ELO Rating System](mechanics/elo-system.md)
+- [Inventory System](mechanics/inventory-system.md)
 - [Genetic Logic Splicing](mechanics/genetic-splicing.md)
 - [ZK-Fog System](mechanics/zk-fog.md)
 - [Piece Capture & Inheritance](mechanics/capture-system.md)

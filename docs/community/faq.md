@@ -9,8 +9,11 @@ Common questions about The Gambit Engine.
 The Gambit Engine is a DNA-encoded, on-chain chess RPG built on Starknet and the Dojo Engine. It transforms traditional chess by introducing:
 
 - **Genetic Logic Splicing**: Pieces inherit traits when capturing
+- **Gas-Based Evolution**: Spend limited gas to evolve pieces strategically
+- **Persistent Inventory**: Keep evolved pieces across matches
 - **ZK-Fog**: Hidden abilities verified with zero-knowledge proofs
 - **Ghost Pieces**: Autonomous AI agents that disrupt gameplay
+- **ELO Matchmaking**: Fair matches based on skill level
 
 ### How is this different from traditional chess?
 
@@ -18,8 +21,10 @@ The Gambit Engine is a DNA-encoded, on-chain chess RPG built on Starknet and the
 |-------------------|---------------|
 | Perfect information | Hidden abilities (ZK-Fog) |
 | Static pieces | Evolving hybrid pieces |
-| Capture = elimination | Capture = inheritance |
+| Capture = elimination | Capture = inheritance opportunity |
+| No persistence | Persistent inventory system |
 | No AI interference | Ghost Pieces intervene |
+| No skill ratings | ELO matchmaking system |
 | Off-chain play | On-chain verifiable |
 
 ### What blockchain does it run on?
@@ -37,29 +42,80 @@ The Gambit Engine runs on **Starknet**, an L2 zk-rollup on Ethereum, providing:
 ### How do I start playing?
 
 1. Connect your Starknet wallet
-2. Create or join a game
-3. Make moves by selecting pieces and target squares
-4. Capture pieces to gain their traits
-5. Use hidden abilities strategically
-6. Watch out for Ghost Pieces!
+2. Create or join a game (or play vs AI)
+3. Select up to 3 evolved pieces from your inventory (optional)
+4. Make moves by selecting pieces and target squares
+5. Capture pieces to gain evolution opportunities
+6. Spend gas wisely to inherit traits
+7. Save evolved pieces to inventory after the game
+
+### What is the gas system?
+
+**Gas** is your evolution budget for each game:
+
+- **Starting Gas**: 10 gas per player, per game
+- **Trait Costs**:
+  - Pawn traits: 1 gas
+  - Knight traits: 3 gas
+  - Bishop traits: 3 gas
+  - Rook traits: 5 gas
+  - Queen traits: 10 gas
+
+**Example**: If your pawn captures a knight, you can spend 3 gas to give your pawn the Knight's L-shaped leap ability.
 
 ### What happens when I capture a piece?
 
 Instead of simple elimination:
-1. The captured piece is removed from the board
-2. Its genetic traits are extracted
-3. Your piece inherits those traits (within complexity budget)
-4. Your piece becomes a unique hybrid
+1. You get an **evolution opportunity**
+2. You can choose to spend gas to inherit traits from the captured piece
+3. Or skip to save gas for better opportunities
+4. If you evolve, your piece gains new movement abilities
+5. After the game, evolved pieces can be saved to your inventory
 
-### What is complexity budget?
+### What is the inventory system?
 
-Each piece has a maximum complexity limit (default: 100). Traits have costs:
-- Knight's Leap: 15
-- Bishop's Diagonal: 25
-- Rook's Straight: 25
-- Queen's Combined: 50
+Your **inventory** stores evolved pieces across matches:
 
-You cannot inherit traits that would exceed your budget.
+- **Save Evolved Pieces**: After a game, save pieces with traits
+- **Reuse in Future**: Deploy saved pieces to new matches
+- **Upgrade Further**: Pieces can gain more traits over multiple games
+- **Rarity Tiers**: Pieces become rarer as they gain traits and games played
+
+### Can I use my evolved pieces in ranked matches?
+
+Yes! You can select up to **3 evolved pieces** from your inventory for each match. This adds strategic depth:
+- Do you use your best pieces now?
+- Or save them for more important matches?
+- Can you build a diverse army of specialized pieces?
+
+### What are the AI bot levels?
+
+There are **10 bot levels** (400-2200 ELO):
+
+| Bot | ELO | Skill Level |
+|-----|-----|-------------|
+| Bot I | 400 | Complete beginner |
+| Bot III | 800 | Casual player |
+| Bot V | 1200 | Intermediate |
+| Bot VII | 1600 | Advanced |
+| Bot IX | 2000 | Master |
+| Bot X | 2200 | Near-perfect |
+
+You'll be matched with bots appropriate to your ELO rating.
+
+### How does ELO matchmaking work?
+
+- **New Players**: Start at 1200 ELO
+- **Matchmaking**: Finds opponents within ±100 ELO
+- **ELO Changes**: Win against higher ELO = more points gained
+- **Bot Matching**: If no human opponent, matched with AI bot at your level
+
+### Can I play against friends?
+
+Yes! You can:
+- Create a custom game and share the join code
+- Play unranked matches (no ELO change)
+- Practice matches with specific piece selections
 
 ### Can I see my opponent's hidden abilities?
 
