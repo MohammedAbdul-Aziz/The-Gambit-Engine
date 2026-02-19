@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import 'https://assets.vercel.com/raw/upload/v1587415301/fonts/2/GeistVF.woff2';
+
+body {
+  @apply bg-background text-accent;
+  font-family: var(--font-geist-sans);
+}
