@@ -1,0 +1,75 @@
+# Torii Indexer Configuration for The Gambit Engine
+# This configuration file sets up the Torii indexer to index
+# all Gambit Engine contract events and models
+
+[world]
+rpc_url = "http://localhost:5050"
+account_address = "0x127fd5f1fe78a71f8bcd1fec642d32234b7878b016830528ec21978469d334"
+private_key = "0xc5b2fcab997346f3ea1c00b002ecf6f382c5f9c9659a3894eb783c5320f912"
+world_address = "0x0"
+
+[indexer]
+# Indexing configuration
+max_pending_block_wait = "1s"
+polling_interval = "1s"
+
+[graphql]
+# GraphQL API configuration
+enabled = true
+port = 8080
+host = "0.0.0.0"
+
+[database]
+# SQLite database configuration
+path = ".torii/gambit_engine.db"
+
+[events]
+# Events to index from Gambit Engine contracts
+contract_addresses = []
+
+# Model filtering
+models = [
+    "gambit_engine::models::components::Game",
+    "gambit_engine::models::components::Piece",
+    "gambit_engine::models::components::GeneticTrait",
+    "gambit_engine::models::components::PositionComponent",
+    "gambit_engine::models::components::Player",
+    "gambit_engine::models::components::Inventory",
+    "gambit_engine::models::components::Ghost",
+    "gambit_engine::models::components::Capture",
+    "gambit_engine::models::components::MoveHistory",
+    "gambit_engine::models::components::ZKCommitment",
+]
+
+# Events to index
+events = [
+    # Game events
+    "gambit_engine::systems::game_system::GameCreatedEvent",
+    "gambit_engine::systems::game_system::GameJoinedEvent",
+    "gambit_engine::systems::game_system::GameEndedEvent",
+    
+    # Piece events
+    "gambit_engine::systems::piece_system::PieceCreatedEvent",
+    "gambit_engine::systems::piece_system::MoveMadeEvent",
+    "gambit_engine::systems::piece_system::CaptureMadeEvent",
+    
+    # Genetics events
+    "gambit_engine::systems::genetics_system::EvolutionAppliedEvent",
+    "gambit_engine::systems::genetics_system::EvolutionSkippedEvent",
+    "gambit_engine::systems::genetics_system::TraitInheritedEvent",
+    
+    # ZK-Fog events
+    "gambit_engine::systems::zk_fog_system::AbilityCommittedEvent",
+    "gambit_engine::systems::zk_fog_system::AbilityRevealedEvent",
+    "gambit_engine::systems::zk_fog_system::ProofVerifiedEvent",
+]
+
+[metrics]
+# Prometheus metrics
+enabled = false
+port = 9090
+
+[logging]
+# Logging configuration
+level = "info"
+format = "json"

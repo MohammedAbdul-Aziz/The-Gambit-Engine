@@ -1,0 +1,19 @@
+[world]
+name = "The Gambit Engine"
+description = "A DNA-encoded, on-chain chess RPG where every move is a mutation"
+cover_uri = "file://assets/cover.png"
+icon_uri = "file://assets/icon.png"
+website = "https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine"
+seed = "gambit_engine"
+
+[world.socials]
+twitter = "GambitEngine"
+discord = "https://discord.gg/gambitengine"
+
+[env]
+rpc_url = "http://localhost:5050"
+account_address = "0x127fd5f1fe78a71f8bcd1fec63e3fe2f0486b6ecd5c86a0466c3a21fa5cfcec"
+private_key = "0xc5b2fcab997346f3ea1c00b002ecf6f382c5f9c9659a3894eb783c5320f912"
+
+[namespace]
+default = "gambit"

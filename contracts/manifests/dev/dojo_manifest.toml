@@ -1,0 +1,11 @@
+[world]
+name = "The Gambit Engine (Dev)"
+description = "Development environment for The Gambit Engine"
+icon_uri = "file://assets/icon.png"
+cover_uri = "file://assets/cover.png"
+
+[env]
+rpc_url = "http://localhost:5050"
+account_address = "0x127fd5f1fe78a71f8bcd1fec642d32234b7878b016830528ec21978469d334"
+private_key = "0xc5b2fcab997346f3ea1c00b002ecf6f382c5f9c9659a3894eb783c5320f912"
+world_address = "0x0"

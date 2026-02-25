@@ -1,0 +1,72 @@
+[package]
+name = "gambit_engine"
+version = "0.1.0"
+edition = "2024_07"
+cairo-version = "2.8.2"
+description = "The Gambit Engine - DNA-encoded, on-chain chess RPG on Starknet"
+authors = ["Mohammed Abdul Aziz", "Ahmed"]
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+starknet = "2.8.2"
+dojo = "1.0.0"
+
+[dev-dependencies]
+dojo_cairo_test = "1.0.0"
+assert_macros = "2.8.2"
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
+casm-add-pythonic-hints = false
+build-external-contracts = ["dojo::world::world_contract::world"]
+
+[tool.dojo]
+initializer = "gambit_engine::models::initializer::initialize"
+
+[[tool.dojo.models]]
+name = "Game"
+
+[[tool.dojo.models]]
+name = "Piece"
+
+[[tool.dojo.models]]
+name = "Player"
+
+[[tool.dojo.models]]
+name = "GeneticTrait"
+
+[[tool.dojo.models]]
+name = "PositionComponent"
+
+[[tool.dojo.models]]
+name = "Inventory"
+
+[[tool.dojo.models]]
+name = "Ghost"
+
+[[tool.dojo.models]]
+name = "Capture"
+
+[[tool.dojo.models]]
+name = "MoveHistory"
+
+[[tool.dojo.models]]
+name = "ZKCommitment"
+
+[tool.dojo.env]
+rpc_url = "http://localhost:5050"
+account_address = "0x127fd5f1fe78a71f8bcd1fec63e3fe2f0486b6ecd5c86a0466c3a21fa5cfcec"
+private_key = "0xc5b2fcab997346f3ea1c00b002ecf6f382c5f9c9659a3894eb783c5320f912"
+
+[tool.dojo.world]
+name = "The Gambit Engine"
+description = "A DNA-encoded, on-chain chess RPG where every move is a mutation"
+cover_uri = "file://assets/cover.png"
+icon_uri = "file://assets/icon.png"
+website = "https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine"
+
+[tool.dojo.world.socials]
+twitter = "GambitEngine"
+discord = "https://discord.gg/gambitengine"
