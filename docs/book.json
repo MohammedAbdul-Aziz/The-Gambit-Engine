@@ -1,0 +1,40 @@
+{
+  "root": "./docs",
+  "title": "The Gambit Engine",
+  "description": "DNA-encoded, on-chain RPG where every move is a mutation",
+  "author": "Mohammed Abdul Aziz & Ahmed",
+  "language": "en",
+  "links": {
+    "sidebar": {
+      "GitHub": "https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine",
+      "Home": "../README.md"
+    }
+  },
+  "plugins": [
+    "search",
+    "lunr",
+    "highlight",
+    "fontsettings",
+    "theme"
+  ],
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    },
+    "highlight": {},
+    "search": {
+      "maxIndexSize": 1000000
+    }
+  },
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "theme": {
+    "primaryColor": "#1a1a2e",
+    "textColor": "#161616",
+    "linkColor": "#0066cc"
+  }
+}

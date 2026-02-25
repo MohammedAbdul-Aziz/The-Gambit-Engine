@@ -10,7 +10,7 @@
 
 **The Gambit Engine** transforms the world's oldest strategy game into a **DNA-encoded, on-chain RPG** where every move is a mutation. Built on the Dojo Engine and Starknet, it introduces revolutionary mechanics that blend chess strategy with genetic evolution and zero-knowledge privacy.
 
-## Key Features
+## 🎯 Key Features
 
 ### ⚡ Gas-Based Evolution System
 
@@ -60,7 +60,7 @@ Introduces strategic uncertainty via **STARKs**:
 
 Autonomous agents that move according to their own on-chain AI logic, disrupting the board and challenging players with unpredictable, provably fair strategies.
 
-## Tech Stack
+## 🏗️ Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
@@ -70,23 +70,89 @@ Autonomous agents that move according to their own on-chain AI logic, disrupting
 | **Indexer** | Torii | GraphQL API for game state queries |
 | **AI** | Giza Network | Verifiable AI "Ghost Pieces" |
 | **Privacy** | STARKs | ZK-Fog and hidden move validation |
+| **Backend** | FastAPI | Off-chain services, matchmaking, AI integration |
+| **Frontend** | Next.js | React-based UI with wallet integration |
 
-## Quick Navigation
+## 📖 Quick Navigation
+
+### For New Users
 
 - **[Getting Started](getting-started.md)** - Setup and installation guide
-- **[Gas Evolution System](mechanics/gas-evolution.md)** - NEW: Gas-based evolution mechanics
-- **[ELO Matchmaking](mechanics/elo-system.md)** - NEW: Skill-based matchmaking
-- **[Inventory System](mechanics/inventory-system.md)** - NEW: Persistent piece storage
-- **[Architecture](architecture/overview.md)** - System design and component interaction
-- **[Game Mechanics](mechanics/genetic-splicing.md)** - Detailed rules and systems
-- **[Technical Reference](reference/cairo-contracts.md)** - API and contract documentation
+- **[Gas Evolution System](mechanics/gas-evolution.md)** - Learn the new gas-based evolution mechanics
+- **[ELO Matchmaking](mechanics/elo-system.md)** - Understand skill-based matchmaking
+- **[Inventory System](mechanics/inventory-system.md)** - Manage your evolved pieces
 
-## Community
+### For Developers
 
-- [GitHub Repository](https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine)
-- [Contributing Guide](community/contributing.md)
-- [FAQ](community/faq.md)
+- **[Architecture Overview](architecture/overview.md)** - System design and component interaction
+- **[Cairo Contracts](reference/cairo-contracts.md)** - Smart contract API reference
+- **[Dojo ECS Components](reference/ecs-components.md)** - Entity-Component-System reference
+- **[Deployment Guide](guides/deployment.md)** - Deploy to local, testnet, or mainnet
+- **[Backend API](../backend/README.md)** - REST API and WebSocket documentation
+
+### For Contributors
+
+- **[Contributing Guide](community/contributing.md)** - How to contribute
+- **[Development Workflow](guides/development.md)** - Daily development practices
+- **[Testing Strategy](guides/testing.md)** - Testing contracts and frontend
+- **[FAQ](community/faq.md)** - Frequently asked questions
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine.git
+cd The-Gambit-Engine
+
+# Build contracts
+cd contracts
+sozo build
+
+# Install and run frontend
+cd ../frontend
+npm install
+npm run dev
+```
+
+For detailed setup instructions, see the [Getting Started Guide](getting-started.md).
+
+## 📚 Documentation Sections
+
+| Section | Description |
+|---------|-------------|
+| **[Introduction](getting-started.md)** | Setup, installation, and quick start |
+| **[Architecture](architecture/overview.md)** | System design and technical architecture |
+| **[Core Mechanics](mechanics/genetic-splicing.md)** | Game rules and mechanics |
+| **[Advanced Features](advanced/ghost-pieces.md)** | Ghost pieces, ZK-proofs, complexity budgets |
+| **[Technical Reference](reference/cairo-contracts.md)** | API documentation and data structures |
+| **[Guides](guides/deployment.md)** | Deployment, development, and testing guides |
+| **[Backend API](../backend/README.md)** | REST API and WebSocket documentation |
+
+## 👥 Team
+
+| Member | Role |
+|--------|------|
+| **Mohammed Abdul Aziz** | Cairo, Python, and GIZA deployments |
+| **Ahmed** | Visionary behind the Genetic Arena and ZK strategist |
+
+## 🔗 Community & Resources
+
+- **[GitHub Repository](https://github.com/MohammedAbdul-Aziz/The-Gambit-Engine)** - Source code and issues
+- **[Contributing Guide](community/contributing.md)** - How to contribute
+- **[FAQ](community/faq.md)** - Frequently asked questions
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
 
 ---
 
-Ready to evolve your strategy? Dive into the documentation and start building on the Gambit Engine.
+## Ready to Evolve Your Strategy?
+
+Dive into the documentation and start building on the Gambit Engine. Whether you're a player, developer, or contributor, you'll find everything you need to get started.
+
+**Next Steps:**
+- 🎮 [Set up your development environment](getting-started.md)
+- 🏗️ [Learn the architecture](architecture/overview.md)
+- ⚔️ [Understand the game mechanics](mechanics/genetic-splicing.md)
+- 🚀 [Deploy your own instance](guides/deployment.md)
